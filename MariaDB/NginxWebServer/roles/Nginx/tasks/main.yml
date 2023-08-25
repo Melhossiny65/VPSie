@@ -1,0 +1,30 @@
+---
+- name: Install WebServer Nginx
+  yum: 
+   name: nginx
+   state: latest
+  notify: 
+  - Restart nginx Service
+
+- name: Copy Directory website
+  copy: src=/root/startbootstrap-creative-gh-pages dest=/var/www/html/
+
+- name: Change mod file
+  shell: chmod 777 /var/www/html/startbootstrap-creative-gh-pages
+
+- name: Change Own Directory startbootstrap
+  shell: chown -R nginx:nginx /var/www/html/startbootstrap-creative-gh-pages
+
+- name: Copy nginxsite config file
+  copy: src=nginxsite.conf dest=/etc/nginx/conf.d/
+
+- name: Copy File nginx
+  copy: src=nginx.conf dest=/etc/nginx/
+
+- name: Copy Hosts file
+  copy: src=hosts dest=/etc/ 
+
+- name: Reload Nginx Service
+  systemd: 
+     name: nginx
+     state: reloaded    
