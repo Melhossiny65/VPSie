@@ -1,11 +1,19 @@
-## Create a new repository by gitbash command line
-* git init
+## GitBash Commands
+* git config --global user.name "Melhossiny"
+* git config --global user.email "XXXX@XXX.com"
+* git config user.name
+* git config user.email
+* git init "MyProject"
+* cd MyProject
+* touch index.html
+* git add index.html
+* git commit -m "Create index.html"
 * git status
-* git add MyProject/
-* git commit -m "My First Commit"
-* git branch -M main
-* git remote Origin URL
-* git push -u Origin main
+* git log
+* git checkout c7d09605cabfde8296c318e48f5abe2f798ae93a
+* git branch
+* git branch MyBranch
+* git checkout MyBranch 
 ---
 ### Push Files to an existing repository
 * git remote add Origin URL
