@@ -1,0 +1,37 @@
+---
+- name: Install MariaDB
+  yum:
+   name: mariadb-server-galera.x86_64
+   state: present
+
+- name: Enable Firewall Ports
+  firewalld:
+    port: "{{ item }}"
+    zone: public
+    state: enabled
+    permanent: true
+  loop: 
+   - 4567/tcp
+   - 4567/udp
+   - 4568/tcp
+   - 3306/tcp
+   - 4444/tcp
+  notify: 
+  - Reload firewalld           
+
+- name: Push Config File For Galera
+  template: src=galera.cnf.j2 dest=/etc/my.cnf.d/galera.cnf
+
+- name: Clear Mysql logs
+  shell: rm -rf /var/lib/mysql/*
+
+- name: Start MariaDB Cluster
+  command: galera_new_cluster
+  when: ansible_host == "192.168.1.11"
+
+- name: Start GaleraDB Service 
+  systemd:
+    name: mariadb.service
+    enabled: yes
+    state: started
+  when: ansible_host != "192.168.1.11"
