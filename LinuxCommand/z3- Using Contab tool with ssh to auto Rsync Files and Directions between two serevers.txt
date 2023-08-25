@@ -1,0 +1,44 @@
+
+
+Crontab -e       لانشاء ملف الاعدادات
+
+* * * * *  bash /root/backup.sh
+
+:wq 
+
+#cd /home/melhossiny/
+melhossiny# vim backup.sh      بفتح الملف عشان اكتب فيه الاوامر اللي عايز انفذها اتوماتيك
+
+!#/bin/bash
+rsync -av -e ssh /home/melhossiny/syc/ root@192.168.1.11:/home/melhossiny/syc          ودا الامر اللي هيتنفذ جوة ملف الاوامر ...الامر دا هينقل الملفات اللي تم اضافتها فقط مش بيعمل مقارنة
+
+rsync -av --delete ssh /home/melhossiny/syc/ root@192.168.1.11:/home/melhossiny/syc   الامر دا افضل عشان بعمل مزامنة حتي للملفات اللي اتمسحت واللي تم انشائها
+
+ملحوظة الملف عشان يتنفذ هيطلب باسورد في كل مرة عشان الحماية فا انا لازم انشئ مفتاح وهمي بين السيرفرين 
+
+ssh-keygen coniguration 
+
+#ssh-keygen
+(/root/.ssh/id_rsa)   بعد الامر الاول بيتم انشاء ملف في المكان دا تلقائي 
+enter 
+enter
+
+علي السيرفر المستقبل 
+
+mkdir -p /root/.ssh/
+
+هرجع تاني علي السرفر اللي علية البيانات
+scp -r /root/.ssh/id_rsa.pub root@192.168.1.7:/root/.ssh/authorized_keys
+
+هروح للسرفر اللي هيستقبل البيانات اعمل بيرميشن للملفات اللي انا انشئتها
+chmod 700 /root/.ssh/
+chmod 600 /root/.ssh/authorized_keys
+
+كدا خلصت الاعدادات علي السيرفرين
+
+
+علي السرفر اللي علية البيانات اللي هو المرسل 
+tail -f /var/log/cron
+عشان اشوف الاحداث بتاعت الخدمة شغالة ولا لأ
+
+

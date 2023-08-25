@@ -1,0 +1,23 @@
+----------- On RHEL-based Linux 9 Release ----------- 
+
+# yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+
+
+
+----------- On RHEL-based Linux 8 Release -----------
+
+# yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+
+----------- On RHEL-based Linux 7 Release -----------
+
+# yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+
+
+# yum install ntfs-3g
+scp -r /root/.ssh/id_rsa.pub root@192.168.1.11:/root/.ssh/authorized_keys
+rsync -av --delete  ssh /home/melhossiny/syc/ root@192.168.1.11:/home/melhossiny/syc/
+
+I finished studying this basic topics in Red Hat Enterprise Linux 9.2. Is that is enough ?
+Or I should continue with more advanced topics?
