@@ -1,0 +1,10 @@
+---
+- name: Enable MariaDB
+  systemd: 
+    name: mariadb
+    enabled: yes
+    state: started
+
+- name: Reload firewalld
+  command: firewall-cmd --reload
+    
