@@ -1,6 +1,6 @@
 ## Git Commands:
 * git config --global user.name "**Melhossiny**"
-* git config --global user.email "Mark@gmail.com"
+* git config --global user.email "mark@gmail.com"
 * git config user.name
 * git config user.email
 * git init "MyProject"
