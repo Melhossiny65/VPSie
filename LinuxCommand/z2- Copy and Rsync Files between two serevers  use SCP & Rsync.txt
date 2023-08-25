@@ -1,7 +1,0 @@
-scp -rv /dev/melhossiny/FMData/LinuxCMD root@192.168.1.11:/dev/melhossiny
-
-stand on my primary source that have afile and copy the file to the server who need this file.
-
-
-rsync -v -e ssh /home/melhossiny/syc/* root@192.168.1.11:/home/melhossiny/syc
-manual rsync between two servers 
