@@ -23,7 +23,7 @@
 * git push -u origin master
 * git pull origin master
 ---
-### Rename Branch name:
+### Rename Branch:
 * git branch
 * git branch --list
 * git branch -m MyNewOne
