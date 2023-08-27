@@ -1,0 +1,7 @@
+---
+- hosts: Servers
+  remote_user: melhossiny
+  become: yes
+  roles:
+    - Apache
+    

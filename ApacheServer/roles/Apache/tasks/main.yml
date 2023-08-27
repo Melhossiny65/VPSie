@@ -1,0 +1,36 @@
+---
+- name: yum Update_Cache
+  shell: yum update
+
+- name: Install Apache Server
+  yum:
+   name: httpd
+   state: latest
+  notify: 
+  - Started Service
+
+- name: Push Web Site
+  copy: src=/root/MyWeb dest=/var/www/html/
+
+- name: Change Owner of folder
+  shell: chown -R apache:apache /var/www/html/MyWeb
+
+- name: Change Folder Permision
+  shell: chmod -R 755 /var/www/html/MyWeb
+
+- name: Push WebServer Config
+  copy: src=web.conf dest=/etc/httpd/conf.d/
+
+- name: Push Hosts File 
+  copy: src=hosts dest=/etc/
+  notify: 
+  - Restart Httpd Service
+
+- name: Stop firewall Service
+  service:
+    name: firewalld
+    state: stopped
+    enabled: False  
+
+   
+

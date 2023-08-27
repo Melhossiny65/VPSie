@@ -1,0 +1,12 @@
+---
+- name: Started Service
+  service:
+    name: httpd
+    state: started
+    enabled: yes 
+
+- name: Restart Httpd Service
+  service: 
+    name: httpd
+    state: restarted
+    
