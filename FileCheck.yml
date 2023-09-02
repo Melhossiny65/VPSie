@@ -12,3 +12,15 @@
    - name: Print file status
      debug:
        var: FileCheck.stat.exists
+
+   - name: Execute task only if file exists
+     stat:
+      path: /root/MyFile
+    register: FileCheck
+    when: FileCheck.stat.exists
+
+  - name: Execute task only if file does not exist
+    stat:
+     path: /root/MyFile
+    register: FileCheck
+    when: not FileCheck.stat.exists     
