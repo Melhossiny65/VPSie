@@ -7,3 +7,6 @@
       file:
         path: /root/MyNewFILE
         state: touch
+        owner: melhossiny
+        group: IT
+        mode: '1777'
