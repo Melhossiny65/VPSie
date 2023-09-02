@@ -1,0 +1,9 @@
+---
+- hosts: Servers
+  remote_user: melhossiny
+  become: yes
+  tasks:
+    - name: Create file
+      file:
+        path: /root/MyNewFILE
+        state: touch
