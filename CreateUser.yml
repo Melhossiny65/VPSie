@@ -1,0 +1,12 @@
+---
+- hosts: Servers
+  remote_user: melhossiny
+  become: yes
+  tasks:
+    - name: Create Admin User
+      user:  
+        name: Admin 
+        comment: IT Admins
+        uid: 1500 
+        group: root
+        password_expire_max: 10
