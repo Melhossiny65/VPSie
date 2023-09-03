@@ -1,26 +1,27 @@
 ansible Servers -m user -a "name=Admin password=<asd.123>" -u melhossiny --become --ask-become-pass -K
 
-ansible Servers -m copy -a "src=/etc/hosts dest=/tmp/hosts"
+ansible Servers -m copy -a "src=/etc/hosts dest=/tmp/hosts" -u melhossiny --become --ask-become-pass -K
 
-ansible Servers -m file -a "dest=/srv/MyFile/a.txt mode=600"
+ansible Servers -m file -a "dest=/srv/MyFile/a.txt mode=600"  -u melhossiny --become --ask-become-pass -K
 
-ansible Servers -m file -a "dest=/srv/MyFile/b.txt mode=600 owner=mdehaan group=mdehaan"
+ansible Servers -m file -a "dest=/srv/MyFile/b.txt mode=600 owner=mdehaan group=mdehaan"  -u melhossiny --become --ask-become-pass -K
 
-ansible Servers -m file -a "dest=/path/to/c state=absent"
+ansible Servers -m file -a "dest=/path/to/c state=absent"  -u melhossiny --become --ask-become-pass -K
 
-ansible Servers -m yum -a "name=acme state=present"
+ansible Servers -m yum -a "name=acme state=present"  -u melhossiny --become --ask-become-pass -K
 
-ansible Servers -m yum -a "name=acme state=absent"
+ansible Servers -m yum -a "name=acme state=absent"   -u melhossiny --become --ask-become-pass -K
 
-ansible all -m user -a "name=Admin state=absent"
+ansible all -m user -a "name=Admin state=absent"  -u melhossiny --become --ask-become-pass -K
 
-ansible Servers -m service -a "name=httpd state=started"
+ansible Servers -m service -a "name=httpd state=started"  -u melhossiny --become --ask-become-pass -K
 
-ansible Servers -m service -a "name=httpd state=restarted"
+ansible Servers -m service -a "name=httpd state=restarted"  -u melhossiny --become --ask-become-pass -K
 
-ansible Servers -m service -a "name=httpd state=stopped"
+ansible Servers -m service -a "name=httpd state=stopped"  -u melhossiny --become --ask-become-pass -K
 
-ansible all -m setup
+ansible all -m setup  -u melhossiny --become --ask-become-pass -K
 
-ansible all -m copy -a "content=Folder dest=/root/bar.txt" -C
+ansible all -m copy -a "content=Folder dest=/root/bar.txt" -C   -u melhossiny --become --ask-become-pass -K
+
 
