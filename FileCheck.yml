@@ -13,14 +13,16 @@
      debug:
        var: FileCheck.stat.exists
 
-   - name: Execute task only if file exists
-     stat:
+   - name: Delete file if exists
+     file:
       path: /root/MyFile
+      state: absent
     register: FileCheck
     when: FileCheck.stat.exists
 
   - name: Execute task only if file does not exist
-    stat:
+    file:
      path: /root/MyFile
+     state: touch
     register: FileCheck
     when: not FileCheck.stat.exists     
