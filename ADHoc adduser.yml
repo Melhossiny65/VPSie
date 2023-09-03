@@ -1,0 +1,1 @@
+ansible Servers -m user -a "name=Admin password=<asd.123>" -u melhossiny --become --ask-become-pass -K
