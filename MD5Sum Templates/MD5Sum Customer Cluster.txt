@@ -1,0 +1,27 @@
+MD5Sum: 1f33329365325b936102be1247215e34  /mnt/pve/templates/images/637/base-637-disk-0.qcow2
+========================================================
+MD5Sum: 6fa32d803bd1cbf021bf0b64218c7087  /mnt/pve/templates/images/654/base-654-disk-0.qcow2
+========================================================
+MD5Sum: 8c7d8b7ce134e3ce13d913bf7de98ab2  /mnt/pve/templates/images/638/base-638-disk-0.qcow2
+========================================================
+MD5Sum: 1274b109ac644c79ea4f517800b02166  /mnt/pve/templates/images/639/base-639-disk-0.qcow2
+========================================================
+MD5Sum: 49f5c44cd5bc2f956cda2183aa924f31  /mnt/pve/templates/images/640/base-640-disk-0.qcow2
+========================================================
+MD5Sum: f420ec44a21e374a0e66cc29715a1059  /mnt/pve/templates/images/609/base-609-disk-0.qcow2
+========================================================
+MD5Sum: eac528b93eda90ca9b6507de869a48ab  /mnt/pve/templates/images/627/base-627-disk-0.qcow2
+========================================================
+MD5Sum: 7a7fd5a41b25396d4902bcd929e75353  /mnt/pve/templates/images/599/base-599-disk-0.qcow2
+========================================================
+MD5Sum: 6a6f72656b9ff167cf98f2c043da87d6  /mnt/pve/templates/images/623/base-623-disk-0.qcow2
+========================================================
+MD5Sum: 5713bab1f9296fded734d246acfaaffb  /mnt/pve/templates/images/625/base-625-disk-0.qcow2
+========================================================
+MD5Sum: 8dfa3ed44afd1942b5d6c26182bf5695  /mnt/pve/templates/images/626/base-626-disk-0.qcow2
+========================================================
+MD5Sum: ff9829d029a0286f491fa2dc61da756e  /mnt/pve/templates/images/621/base-621-disk-0.qcow2
+========================================================
+MD5Sum: 162aae6e51615bf6be008c01de059aa4  /mnt/pve/templates/images/641/base-641-disk-0.qcow2
+========================================================
+MD5Sum: 72849ca8712c2eb0ae8d6f8e130410fb  /mnt/pve/templates/images/629/base-629-disk-0.qcow2
