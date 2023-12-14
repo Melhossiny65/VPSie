@@ -1,4 +1,4 @@
-### disable proxmox commmercial repo
+ ### disable proxmox commmercial repo
 ```
 sed -i "s/^deb/\#deb/" /etc/apt/sources.list.d/pve-enterprise.list
 ```
