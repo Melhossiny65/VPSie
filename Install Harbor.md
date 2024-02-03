@@ -50,7 +50,51 @@ curl -s https://api.github.com/repos/goharbor/harbor/releases/latest | grep brow
 ```
 wget https://download1591.mediafire.com/8ohzvax7y3agfCYJ1c2jV845W7szw9-gCp2tog1VPYql7RqeoWjje-xcAnHiIqEi0ORUnpfhD9eSzQXwb1RoucwR4_hNEGTXRckOxzIvEw2sxCjjX_k3lEmLRGvT1ECtYjh1iQf7vrfrdhwIcU9pUa9ifRSbxsmiUSoAFbrZ1WM2/p8nbmh275ia0ywq/harbor-offline-installer-v2.9.1.tgz
 ```
+```
+tar zxvf harbor-offline-installer-v*.tgz
+```
+```
+cd harbor
+```
+```
+ls -al
+```
+## Configure Harbor inside harbor folder
+```
+nano harbor.yml.tmpl
+```
+### Change these parameters 
+- "hostname"
+- "harbor_admin_password"
+* Hashing https settings
+* Save as this filename (drop the .tmpl)
+* harbor.yml
 
+  ### Verify configurations
+  ```
+  cat harbor.yml
+  ```
+  ## Install Harbor
+  ```
+  docker image ls
+  ```
+  ```
+  docker container ls
+  ```
+  ```
+  ./install.sh
+  ```
+  ```
+  docker image ls
+  ```
+  ```
+  docker container ls
+  ```
+
+  ## Test Harbor web access
+  ```
+  http://IP_ADDRESS
+  ```
 
 
 
