@@ -1,9 +1,0 @@
----
-- hosts: Servers
-  remote_user: melhossiny
-  become: yes
-  tasks:
-    - name: Create Directory
-      file:
-        path: /root/MyDirectory
-        state: directory
