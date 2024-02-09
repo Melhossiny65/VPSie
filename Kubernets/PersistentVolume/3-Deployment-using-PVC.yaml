@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vpsie
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: example-app
+  template:
+    metadata:
+      labels:
+        app: example-app
+    spec:
+      containers:
+        - name: example-container
+          image: nginx
+          volumeMounts:
+            - name: storage
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: example-pvc
